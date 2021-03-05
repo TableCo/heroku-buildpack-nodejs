@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-JQ="/usr/bin/jq"
+JQ="/tmp/jq"
 if ! test -f "$JQ"; then
-  curl -Ls https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 > "/usr/bin/jq" \
-      && chmod +x "/usr/bin/jq"
+  curl -Ls https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 > "/tmp/jq" \
+      && chmod +x "/tmp/jq"
 fi
 
 read_json() {
